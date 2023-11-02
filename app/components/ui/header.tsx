@@ -65,7 +65,11 @@ export function Header(props: HeaderProps) {
       <Divider />
       <List>
         {headerItems.map((item) => (
-          <Link href={item.path} style={{ textDecoration: 'none', color: 'inherit' }}>
+          <Link
+            href={item.path}
+            style={{ textDecoration: 'none', color: 'inherit' }}
+            key={item.label}
+          >
             <ListItem key={item.label} disablePadding>
               <ListItemButton sx={{ textAlign: 'center' }}>
                 <ListItemText primary={item.label} />
@@ -104,7 +108,7 @@ export function Header(props: HeaderProps) {
 
               <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
                 {headerItems.map((item) => (
-                  <Link href={item.path}>
+                  <Link href={item.path} key={item.label}>
                     <Button key={item.label} sx={{ color: '#fff', textTransform: 'none' }}>
                       <Typography>{item.label}</Typography>
                     </Button>
