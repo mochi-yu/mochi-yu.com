@@ -1,8 +1,8 @@
+import { Box, CssBaseline } from '@mui/material'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Footer } from '@/components/ui/footer'
 import { Header } from '@/components/ui/header'
-import { Box, CssBaseline } from '@mui/material'
 
 const inter = Inter({ subsets: ['latin'] })
 

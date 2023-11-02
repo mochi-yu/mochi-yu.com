@@ -1,5 +1,6 @@
 'use client'
 
+import MenuIcon from '@mui/icons-material/Menu'
 import {
   AppBar,
   Box,
@@ -17,7 +18,6 @@ import {
   Typography,
   useScrollTrigger,
 } from '@mui/material'
-import MenuIcon from '@mui/icons-material/Menu'
 import { useState } from 'react'
 
 interface HeaderProps {
