@@ -5,7 +5,6 @@ import {
   AppBar,
   Box,
   Button,
-  CssBaseline,
   Divider,
   Drawer,
   IconButton,
@@ -18,6 +17,7 @@ import {
   Typography,
   useScrollTrigger,
 } from '@mui/material'
+import Link from 'next/link'
 import { useState } from 'react'
 
 interface HeaderProps {
@@ -35,7 +35,25 @@ export function Header(props: HeaderProps) {
     setMobileOpen((prevState) => !prevState)
   }
 
-  const navItems = ['Top', 'About', 'Skills', 'Works', 'Contact']
+  const headerItems = [
+    {
+      label: 'About',
+      path: '/',
+    },
+    {
+      label: 'Skills',
+      path: '/skill',
+    },
+    {
+      label: 'Works',
+      path: '/work',
+    },
+    {
+      label: 'Contact',
+      path: '/contact',
+    },
+  ]
+
   const container = window !== undefined ? () => window().document.body : undefined
   const drawerWidth = 240
 
@@ -46,12 +64,14 @@ export function Header(props: HeaderProps) {
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} />
-            </ListItemButton>
-          </ListItem>
+        {headerItems.map((item) => (
+          <Link href={item.path} style={{ textDecoration: 'none', color: 'inherit' }}>
+            <ListItem key={item.label} disablePadding>
+              <ListItemButton sx={{ textAlign: 'center' }}>
+                <ListItemText primary={item.label} />
+              </ListItemButton>
+            </ListItem>
+          </Link>
         ))}
       </List>
     </Box>
@@ -74,15 +94,21 @@ export function Header(props: HeaderProps) {
                 <MenuIcon />
               </IconButton>
 
-              <Typography variant='h6' component='div' sx={{ flexGrow: 1, display: 'block' }}>
-                もっちー | mochi-yu
-              </Typography>
+              <Box sx={{ flexGrow: 1, display: 'block' }}>
+                <Link href='/' style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <Typography variant='h6' sx={{ display: 'inline' }}>
+                    もっちー | mochi-yu
+                  </Typography>
+                </Link>
+              </Box>
 
               <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-                {navItems.map((item) => (
-                  <Button key={item} sx={{ color: '#fff', textTransform: 'none' }}>
-                    <Typography>{item}</Typography>
-                  </Button>
+                {headerItems.map((item) => (
+                  <Link href={item.path}>
+                    <Button key={item.label} sx={{ color: '#fff', textTransform: 'none' }}>
+                      <Typography>{item.label}</Typography>
+                    </Button>
+                  </Link>
                 ))}
               </Box>
 
