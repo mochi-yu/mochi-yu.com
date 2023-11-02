@@ -59,9 +59,9 @@ export function Header(props: HeaderProps) {
 
   return (
     <>
-      <Box sx={{ display: 'flex' }}>
+      <Box sx={{ display: 'flex' }} component='header'>
         <Slide appear={false} direction='down' in={!trigger}>
-          <AppBar component='header'>
+          <AppBar>
             <Toolbar>
               {/* 幅の狭い画面のハンバーガーバー */}
               <IconButton
