@@ -18,7 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={inter.className} style={{ backgroundColor: 'gray' }}>
         <CssBaseline />
         <Header />
-        <Box sx={{ pt: '70px' }} bgcolor='white' minHeight='90vh' component='main'>
+        <Box sx={{ pt: '60px' }} bgcolor='white' minHeight='90vh' component='main'>
           {children}
         </Box>
         <Footer />
