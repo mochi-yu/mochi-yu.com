@@ -11,7 +11,8 @@ export default function HomePage() {
           height='90vh'
           sx={{
             backgroundImage: `url(${bgImage.src})`,
-            backgroundSize: '100vw auto',
+            backgroundSize: { xs: 'auto 150vh', md: '1500px auto' },
+            backgroundPosition: 'top',
             backgroundPositionY: '-150px',
           }}
         >
@@ -25,7 +26,9 @@ export default function HomePage() {
             direction='column'
             spacing={3}
           >
-            <Typography variant='h3'>もっちー / mochi-yu</Typography>
+            <Typography variant='h3' sx={{ fontSize: { xs: '30px', md: '60px' } }}>
+              もっちー / mochi-yu
+            </Typography>
             <Divider sx={{ width: '20%', borderBottomWidth: 4 }} />
           </Stack>
         </Box>
