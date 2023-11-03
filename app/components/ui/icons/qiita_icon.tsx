@@ -7,7 +7,7 @@ interface Props {
 
 export function QiitaIcon({ width = 25 }: Props) {
   return (
-    <a href='https://github.com/mochi-yu'>
+    <a href='https://qiita.com/mochi_2225'>
       <Image src={QiitaIconImage} width={width} alt='Qiitaのアイコン' />
     </a>
   )
