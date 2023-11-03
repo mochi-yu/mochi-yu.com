@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import { Footer } from '@/components/ui/footer'
 import { Header } from '@/components/ui/header'
 import FaviconImage from '@/image/favicon.png'
+import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,6 +17,16 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='ja'>
+      <Script async src='https://www.googletagmanager.com/gtag/js?id=G-TXBGDG4HDJ'></Script>
+      <Script id='google-analytics'>
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-TXBGDG4HDJ');
+        `}
+      </Script>
       <body className={inter.className} style={{ backgroundColor: 'gray' }}>
         <CssBaseline />
         <Header />
