@@ -29,7 +29,11 @@ export default function TopPage() {
             display='flex'
             spacing={3}
           >
-            <Typography variant='h3' sx={{ fontSize: { xs: '30px', md: '60px' } }}>
+            <Typography
+              variant='h3'
+              sx={{ fontSize: { xs: '30px', md: '60px' } }}
+              fontWeight='bold'
+            >
               もっちー / mochi-yu
             </Typography>
             <Divider sx={{ width: '20%', borderBottomWidth: 4 }} />
