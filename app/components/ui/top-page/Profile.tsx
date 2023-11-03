@@ -1,7 +1,7 @@
 import { Divider, Grid, Stack, Typography } from '@mui/material'
 import Image from 'next/image'
-import UserIconImage from '@/image/user-image.jpg'
 import Link from 'next/link'
+import UserIconImage from '@/image/user-image.jpg'
 
 export function TopPageProfile() {
   return (
