@@ -1,4 +1,4 @@
-import GithubIconImage from '@/github.svg'
+import GithubIconImage from '@/image/github.svg'
 
 interface Props {
   width?: string

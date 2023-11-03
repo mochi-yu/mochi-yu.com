@@ -1,9 +1,10 @@
-import { Box, Divider, Paper, Stack, Typography } from '@mui/material'
-import bgImage from '@/bg-image.jpg'
+import { Box, Divider, Stack, Typography } from '@mui/material'
+import bgImage from '@/image/top-page-bg-image.jpg'
 import { GithubIcon } from './components/ui/icons/github_icon'
 import { QiitaIcon } from './components/ui/icons/qiita_icon'
+import { TopPageProfile } from './components/ui/top-page/Profile'
 
-export default function HomePage() {
+export default function TopPage() {
   return (
     <>
       <Stack>
@@ -38,9 +39,9 @@ export default function HomePage() {
           </Stack>
         </Box>
 
-        <Box sx={{ height: '500px', boxShadow: '0px -5px 10px gray' }}>
+        <Box sx={{ height: '500px', boxShadow: '0px -5px 10px gray', py: '50px' }}>
           {/* 自己紹介の概要 */}
-          <Box></Box>
+          <TopPageProfile />
 
           {/* プロダクトの概要 */}
           <Box></Box>

@@ -1,4 +1,4 @@
-import QiitaIconImage from '@/qiita.png'
+import QiitaIconImage from '@/image/qiita.png'
 
 interface Props {
   width?: string
