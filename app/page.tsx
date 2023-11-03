@@ -1,5 +1,7 @@
 import { Box, Divider, Paper, Stack, Typography } from '@mui/material'
 import bgImage from '@/bg-image.jpg'
+import { GithubIcon } from './components/ui/icons/github_icon'
+import { QiitaIcon } from './components/ui/icons/qiita_icon'
 
 export default function HomePage() {
   return (
@@ -23,13 +25,16 @@ export default function HomePage() {
             alignItems='center'
             justifyContent='center'
             display='flex'
-            direction='column'
             spacing={3}
           >
             <Typography variant='h3' sx={{ fontSize: { xs: '30px', md: '60px' } }}>
               もっちー / mochi-yu
             </Typography>
             <Divider sx={{ width: '20%', borderBottomWidth: 4 }} />
+            <Stack direction='row' spacing={2}>
+              <GithubIcon />
+              <QiitaIcon />
+            </Stack>
           </Stack>
         </Box>
 
