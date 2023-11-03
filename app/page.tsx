@@ -16,7 +16,8 @@ export default function TopPage() {
             backgroundImage: `url(${bgImage.src})`,
             backgroundSize: { xs: 'auto 150vh', md: '1500px auto' },
             backgroundPosition: 'top',
-            backgroundPositionY: '-150px',
+            backgroundPositionY: { md: '-150px', xs: '-100px' },
+            backgroundRepeat: 'no-repeat',
           }}
         >
           <Stack
