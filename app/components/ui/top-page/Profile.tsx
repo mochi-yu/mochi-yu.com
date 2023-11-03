@@ -1,6 +1,8 @@
 import { Divider, Grid, Stack, Typography } from '@mui/material'
 import Image from 'next/image'
 import Link from 'next/link'
+import { GithubIcon } from '@/components/ui/icons/github_icon'
+import { QiitaIcon } from '@/components/ui/icons/qiita_icon'
 import UserIconImage from '@/image/user-image.jpg'
 
 export function TopPageProfile() {
@@ -37,9 +39,13 @@ export function TopPageProfile() {
           />
         </Grid>
         <Grid item xs={12} md={8}>
-          <Typography variant='h4' marginBottom='10px' fontWeight='bold'>
-            もっちー
-          </Typography>
+          <Stack direction='row' marginBottom='10px' alignItems='center' spacing={2}>
+            <Typography variant='h4' fontWeight='bold'>
+              もっちー
+            </Typography>
+            <GithubIcon width={30} />
+            <QiitaIcon width={30} />
+          </Stack>
           <Typography marginY='10px'>
             2001年生まれ。神奈川県横浜市 出身、長野県諏訪地域 在住。
             <br />
