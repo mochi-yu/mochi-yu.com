@@ -1,4 +1,4 @@
-import { AppBar, Box, Stack, Typography } from '@mui/material'
+import { AppBar, Stack, Typography } from '@mui/material'
 
 export function Footer() {
   return (

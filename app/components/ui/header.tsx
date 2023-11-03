@@ -5,7 +5,6 @@ import {
   AppBar,
   Box,
   Button,
-  Divider,
   Drawer,
   IconButton,
   List,
@@ -41,12 +40,12 @@ export function Header(props: HeaderProps) {
       path: '/',
     },
     {
-      label: 'Skills',
-      path: '/skill',
-    },
-    {
       label: 'Works',
       path: '/work',
+    },
+    {
+      label: 'Skills',
+      path: '/skill',
     },
     {
       label: 'Contact',
