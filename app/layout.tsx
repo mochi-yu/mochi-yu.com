@@ -1,10 +1,10 @@
 import { Box, CssBaseline } from '@mui/material'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Script from 'next/script'
 import { Footer } from '@/components/ui/footer'
 import { Header } from '@/components/ui/header'
 import FaviconImage from '@/image/favicon.png'
-import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'] })
 
