@@ -1,93 +1,60 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import { Box, Divider, Stack, Typography } from '@mui/material'
+import { GithubIcon } from './components/ui/icons/github_icon'
+import { QiitaIcon } from './components/ui/icons/qiita_icon'
+import { TopPageProfile } from './components/ui/top-page/Profile'
+import bgImage from '@/image/top-page-bg-image.jpg'
 
-export default function Home() {
+export default function TopPage() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href='https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app'
-            target='_blank'
-            rel='noopener noreferrer'
+    <>
+      <Stack>
+        {/* トップページの名前と画像 */}
+        <Box
+          id='top-profile-photo'
+          height='90vh'
+          sx={{
+            backgroundImage: `url(${bgImage.src})`,
+            backgroundSize: { xs: 'auto 150vh', md: '1500px auto' },
+            backgroundPosition: 'top',
+            backgroundPositionY: { md: '-150px', xs: '-100px' },
+            backgroundRepeat: 'no-repeat',
+          }}
+        >
+          <Stack
+            sx={{ bgcolor: 'rgb(255, 255, 255, .5)' }}
+            position='relative'
+            height='100%'
+            alignItems='center'
+            justifyContent='center'
+            display='flex'
+            spacing={3}
           >
-            By{' '}
-            <Image
-              src='/vercel.svg'
-              alt='Vercel Logo'
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+            <Typography
+              variant='h3'
+              sx={{ fontSize: { xs: '30px', md: '60px' } }}
+              fontWeight='bold'
+            >
+              もっちー / mochi-yu
+            </Typography>
+            <Divider sx={{ width: '20%', borderBottomWidth: 4 }} />
+            <Stack direction='row' spacing={2}>
+              <GithubIcon />
+              <QiitaIcon />
+            </Stack>
+          </Stack>
+        </Box>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src='/next.svg'
-          alt='Next.js Logo'
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+        <Box sx={{ height: 'auto', boxShadow: '0px -5px 10px gray', py: '50px' }}>
+          {/* 自己紹介の概要 */}
+          <TopPageProfile />
 
-      <div className={styles.grid}>
-        <a
-          href='https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app'
-          className={styles.card}
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+          {/* プロダクトの概要 */}
+          <Box></Box>
 
-        <a
-          href='https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app'
-          className={styles.card}
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href='https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app'
-          className={styles.card}
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href='https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app'
-          className={styles.card}
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>Instantly deploy your Next.js site to a shareable URL with Vercel.</p>
-        </a>
-      </div>
-    </main>
+          {/* スキルの概要 */}
+          <Box></Box>
+        </Box>
+      </Stack>
+    </>
   )
 }
