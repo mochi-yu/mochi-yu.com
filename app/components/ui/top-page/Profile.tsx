@@ -6,8 +6,15 @@ import UserIconImage from '@/image/user-image.jpg'
 export function TopPageProfile() {
   return (
     <Stack alignItems='center' justifyContent='center' mx='30px'>
-      <Typography align='center'>プロフィール</Typography>
-      <Divider sx={{ width: '30px' }} />
+      <Typography
+        align='center'
+        variant='h3'
+        fontWeight='bold'
+        sx={{ fontSize: { xs: '10vw', sm: '3rem' } }}
+      >
+        プロフィール
+      </Typography>
+      <Divider sx={{ width: '140px', my: '20px', borderBottomWidth: 5 }} />
       <Grid
         container
         spacing={5}
