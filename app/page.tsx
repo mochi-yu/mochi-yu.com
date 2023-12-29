@@ -45,14 +45,16 @@ export default function TopPage() {
         </Box>
 
         <Box sx={{ height: 'auto', boxShadow: '0px -5px 10px gray', py: '50px' }}>
-          {/* 自己紹介の概要 */}
-          <TopPageProfile />
+          <Box maxWidth='1000px' margin='auto'>
+            {/* 自己紹介の概要 */}
+            <TopPageProfile />
 
-          {/* プロダクトの概要 */}
-          <Box></Box>
+            {/* プロダクトの概要 */}
+            <Box></Box>
 
-          {/* スキルの概要 */}
-          <Box></Box>
+            {/* スキルの概要 */}
+            <Box></Box>
+          </Box>
         </Box>
       </Stack>
     </>
