@@ -5,6 +5,7 @@ import Script from 'next/script'
 import { Footer } from '../components/ui/footer'
 import { Header } from '../components/ui/header'
 import FaviconImage from '@/image/favicon.png'
+import { MetadataDynamic } from '@/components/MetadataDynamic'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,6 +18,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='ja'>
+      <MetadataDynamic />
       <Script async src='https://www.googletagmanager.com/gtag/js?id=G-TXBGDG4HDJ'></Script>
       <Script id='google-analytics'>
         {`
