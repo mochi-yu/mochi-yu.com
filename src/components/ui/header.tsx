@@ -57,7 +57,7 @@ export function Header(props: HeaderProps) {
   const drawerWidth = 240
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }} component='header'>
       <List>
         {headerItems.map((item) => (
           <Link
