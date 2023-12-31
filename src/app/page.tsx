@@ -1,7 +1,7 @@
 import { Box, Divider, Stack, Typography } from '@mui/material'
-import { GithubIcon } from './components/ui/icons/github_icon'
-import { QiitaIcon } from './components/ui/icons/qiita_icon'
-import { TopPageProfile } from './components/ui/top-page/Profile'
+import { GithubIcon } from '../components/ui/icons/github_icon'
+import { QiitaIcon } from '../components/ui/icons/qiita_icon'
+import { TopPageProfile } from '../components/ui/top-page/Profile'
 import bgImage from '@/image/top-page-bg-image.jpg'
 
 export default function TopPage() {
