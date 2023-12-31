@@ -1,8 +1,8 @@
 import { Divider, Grid, Stack, Typography } from '@mui/material'
 import Image from 'next/image'
 import Link from 'next/link'
-import { GithubIcon } from '@/components/ui/icons/github_icon'
-import { QiitaIcon } from '@/components/ui/icons/qiita_icon'
+import { GithubIcon } from '../icons/github_icon'
+import { QiitaIcon } from '../icons/qiita_icon'
 import UserIconImage from '@/image/user-image.jpg'
 
 export function TopPageProfile() {
