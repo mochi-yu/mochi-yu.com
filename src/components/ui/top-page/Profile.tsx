@@ -12,7 +12,7 @@ export function TopPageProfile() {
         align='center'
         variant='h3'
         fontWeight='bold'
-        sx={{ fontSize: { xs: '10vw', sm: '3rem' } }}
+        sx={{ fontSize: { xs: '10vw', md: '3rem' } }}
       >
         プロフィール
       </Typography>

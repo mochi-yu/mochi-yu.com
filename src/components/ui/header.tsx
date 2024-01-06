@@ -88,7 +88,7 @@ export function Header(props: HeaderProps) {
                 aria-label='open drawer'
                 edge='start'
                 onClick={handleDrawerToggle}
-                sx={{ mr: 2, display: { sm: 'none' } }}
+                sx={{ mr: 2, display: { md: 'none' } }}
               >
                 <MenuIcon />
               </IconButton>
@@ -101,7 +101,7 @@ export function Header(props: HeaderProps) {
                 </Link>
               </Box>
 
-              <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+              <Box sx={{ display: { xs: 'none', md: 'block' } }}>
                 {headerItems.map((item) => (
                   <Link href={item.path} key={item.label}>
                     <Button key={item.label} sx={{ color: '#fff', textTransform: 'none' }}>
@@ -121,7 +121,7 @@ export function Header(props: HeaderProps) {
                     keepMounted: true, // Better open performance on mobile.
                   }}
                   sx={{
-                    display: { xs: 'block', sm: 'none' },
+                    display: { xs: 'block', md: 'none' },
                     '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
                   }}
                 >

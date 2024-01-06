@@ -10,7 +10,7 @@ export default function TopPage() {
         <TopPageHeader />
 
         <Box sx={{ height: 'auto', boxShadow: '0px -5px 10px gray', py: '50px' }}>
-          <Box maxWidth='1000px' margin='auto'>
+          <Box maxWidth='1200px' margin='auto'>
             {/* 自己紹介の概要 */}
             <TopPageProfile />
 

@@ -8,17 +8,18 @@ export function TopPageHeader() {
     <>
       <Box
         id='top-profile-photo'
-        height='90vh'
+        maxHeight='90vh'
         sx={{
           backgroundImage: `url(${bgImage.src})`,
-          backgroundSize: { xs: 'auto 150vh', md: '1500px auto' },
-          backgroundPosition: 'top',
-          backgroundPositionY: { md: '-150px', xs: '-100px' },
+          height: { xs: '550px', lg: '90vw' },
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundPositionY: { lg: '30%', xs: '10%' },
           backgroundRepeat: 'no-repeat',
         }}
       >
         <Stack
-          sx={{ bgcolor: 'rgb(255, 255, 255, .5)' }}
+          sx={{ bgcolor: 'rgb(255, 255, 255, .7)' }}
           position='relative'
           height='100%'
           alignItems='center'
@@ -26,13 +27,19 @@ export function TopPageHeader() {
           display='flex'
           spacing={3}
         >
-          <Typography variant='h3' sx={{ fontSize: { xs: '30px', md: '60px' } }} fontWeight='bold'>
+          <Typography variant='h3' sx={{ fontSize: { xs: '30px', lg: '4vw' } }} fontWeight='bold'>
             もっちー / mochi-yu
           </Typography>
-          <Divider sx={{ width: '20%', borderBottomWidth: 4 }} />
+          <Divider
+            sx={{
+              width: { lg: '300px', xs: '180px' },
+              borderBottomWidth: 4,
+              borderColor: 'silver',
+            }}
+          />
           <Stack direction='row' spacing={2}>
-            <GithubIcon />
-            <QiitaIcon />
+            <GithubIcon width={30} />
+            <QiitaIcon width={30} />
           </Stack>
         </Stack>
       </Box>
