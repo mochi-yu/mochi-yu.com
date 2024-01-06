@@ -2,11 +2,12 @@ import { Box, CssBaseline, ThemeProvider } from '@mui/material'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Script from 'next/script'
-import { Footer } from '../components/ui/footer'
-import { Header } from '../components/ui/header'
-import FaviconImage from '@/image/favicon.png'
-import { MetadataDynamic } from '@/components/MetadataDynamic'
 import { theme } from './theme'
+import { MetadataDynamic } from '@/components/MetadataDynamic'
+import { Footer } from '@/components/ui/footer'
+import { Header } from '@/components/ui/header'
+
+import FaviconImage from '@/image/favicon.png'
 
 const inter = Inter({ subsets: ['latin'] })
 
