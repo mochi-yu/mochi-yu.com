@@ -80,7 +80,9 @@ export function Header(props: HeaderProps) {
     <>
       <Box sx={{ display: 'flex' }} component='header'>
         <Slide appear={false} direction='down' in={!trigger}>
-          <AppBar>
+          <AppBar
+            sx={{ bgcolor: 'white', color: 'black', border: { md: '2px solid black', xs: 'none' } }}
+          >
             <Toolbar>
               {/* 幅の狭い画面のハンバーガーバー */}
               <IconButton
@@ -95,7 +97,7 @@ export function Header(props: HeaderProps) {
 
               <Box sx={{ flexGrow: 1, display: 'block' }}>
                 <Link href='/' style={{ textDecoration: 'none', color: 'inherit' }}>
-                  <Typography variant='h6' sx={{ display: 'inline' }}>
+                  <Typography variant='h6' sx={{ display: 'inline', fontWeight: 'bold' }}>
                     もっちー | mochi-yu
                   </Typography>
                 </Link>
@@ -104,7 +106,7 @@ export function Header(props: HeaderProps) {
               <Box sx={{ display: { xs: 'none', md: 'block' } }}>
                 {headerItems.map((item) => (
                   <Link href={item.path} key={item.label}>
-                    <Button key={item.label} sx={{ color: '#fff', textTransform: 'none' }}>
+                    <Button key={item.label} sx={{ color: 'black', textTransform: 'none' }}>
                       <Typography>{item.label}</Typography>
                     </Button>
                   </Link>
