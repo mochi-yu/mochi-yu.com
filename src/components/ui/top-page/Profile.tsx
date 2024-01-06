@@ -1,8 +1,8 @@
 import { Divider, Grid, Stack, Typography } from '@mui/material'
 import Image from 'next/image'
 import Link from 'next/link'
-import { GithubIcon } from '@/components/ui/icons/github_icon'
-import { QiitaIcon } from '@/components/ui/icons/qiita_icon'
+import { GithubIcon } from '../icons/github_icon'
+import { QiitaIcon } from '../icons/qiita_icon'
 import UserIconImage from '@/image/user-image.jpg'
 
 export function TopPageProfile() {
@@ -12,7 +12,7 @@ export function TopPageProfile() {
         align='center'
         variant='h3'
         fontWeight='bold'
-        sx={{ fontSize: { xs: '10vw', sm: '3rem' } }}
+        sx={{ fontSize: { xs: '10vw', md: '3rem' } }}
       >
         プロフィール
       </Typography>

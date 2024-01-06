@@ -57,7 +57,7 @@ export function Header(props: HeaderProps) {
   const drawerWidth = 240
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }} component='header'>
       <List>
         {headerItems.map((item) => (
           <Link
@@ -80,7 +80,9 @@ export function Header(props: HeaderProps) {
     <>
       <Box sx={{ display: 'flex' }} component='header'>
         <Slide appear={false} direction='down' in={!trigger}>
-          <AppBar>
+          <AppBar
+            sx={{ bgcolor: 'white', color: 'black', border: { md: '2px solid black', xs: 'none' } }}
+          >
             <Toolbar>
               {/* 幅の狭い画面のハンバーガーバー */}
               <IconButton
@@ -88,23 +90,23 @@ export function Header(props: HeaderProps) {
                 aria-label='open drawer'
                 edge='start'
                 onClick={handleDrawerToggle}
-                sx={{ mr: 2, display: { sm: 'none' } }}
+                sx={{ mr: 2, display: { md: 'none' } }}
               >
                 <MenuIcon />
               </IconButton>
 
               <Box sx={{ flexGrow: 1, display: 'block' }}>
                 <Link href='/' style={{ textDecoration: 'none', color: 'inherit' }}>
-                  <Typography variant='h6' sx={{ display: 'inline' }}>
+                  <Typography variant='h6' sx={{ display: 'inline', fontWeight: 'bold' }}>
                     もっちー | mochi-yu
                   </Typography>
                 </Link>
               </Box>
 
-              <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+              <Box sx={{ display: { xs: 'none', md: 'block' } }}>
                 {headerItems.map((item) => (
                   <Link href={item.path} key={item.label}>
-                    <Button key={item.label} sx={{ color: '#fff', textTransform: 'none' }}>
+                    <Button key={item.label} sx={{ color: 'black', textTransform: 'none' }}>
                       <Typography>{item.label}</Typography>
                     </Button>
                   </Link>
@@ -121,7 +123,7 @@ export function Header(props: HeaderProps) {
                     keepMounted: true, // Better open performance on mobile.
                   }}
                   sx={{
-                    display: { xs: 'block', sm: 'none' },
+                    display: { xs: 'block', md: 'none' },
                     '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
                   }}
                 >
