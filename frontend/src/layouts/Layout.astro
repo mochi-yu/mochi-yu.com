@@ -1,7 +1,13 @@
 ---
 import HtmlBaseLayout from './HtmlBaseLayout.astro';
+
+interface Props {
+  title?: string;
+}
+
+const { title } = Astro.props;
 ---
 
-<HtmlBaseLayout>
+<HtmlBaseLayout title={title}>
   <p>ほげほげ</p>
 </HtmlBaseLayout>
