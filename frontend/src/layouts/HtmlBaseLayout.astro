@@ -9,6 +9,18 @@ const { title } = Astro.props
 <!doctype html>
 <html lang='ja'>
   <head>
+    <!-- ▼▼▼ Google tag (gtag.js) ▼▼▼ -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-TXBGDG4HDJ"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-TXBGDG4HDJ');
+    </script>
+    <!-- ▲▲▲▲▲▲ -->
+
+    <meta charset='UTF-8' />
     <meta name='description' content='もっちーのポートフォリオサイトです。' />
     
     <link rel='icon' type='image/svg+xml' href='/favicon.png' />
