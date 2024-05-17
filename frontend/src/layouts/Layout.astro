@@ -1,5 +1,6 @@
 ---
 import HtmlBaseLayout from './HtmlBaseLayout.astro';
+import Header from '../components/ui/header.astro';
 
 interface Props {
   title?: string;
@@ -9,5 +10,6 @@ const { title } = Astro.props;
 ---
 
 <HtmlBaseLayout title={title}>
-  <p>ほげほげ</p>
+  <Header />
+  <p class:list={['text-display-large']}>ほげほげ</p>
 </HtmlBaseLayout>
