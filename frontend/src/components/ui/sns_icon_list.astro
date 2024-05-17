@@ -1,10 +1,10 @@
 ---
 interface Props {
   size?: string;
-  padding?: string;
+  gap?: string;
 }
 
-const { size = '40px', padding = '30px' } = Astro.props;
+const { size = '40px', gap = '30px' } = Astro.props;
 ---
 
 <div id='sns_icon_list'>
@@ -15,11 +15,11 @@ const { size = '40px', padding = '30px' } = Astro.props;
     <img src='/images/qiita.png' alt='Qiitaのアイコン' />
   </a>
 </div>
-<style define:vars={{ size: size, padding: padding }}>
+<style define:vars={{ size: size, gap: gap }}>
   #sns_icon_list {
     width: fit-content;
     display: flex;
-    column-gap: var(--padding);
+    column-gap: var(--gap);
   }
 
   #sns_icon_list > a {
