@@ -17,7 +17,7 @@ const resizeEventHandler = () => {
 function setViewport(viewportContent: string) {
   document
     .querySelector('meta[name="viewport"]')!
-    .setAttribute('content', 'width=' + viewportContent + ', initial-scale=1.0');
+    .setAttribute('content', 'width=' + viewportContent);
 }
 
 window.addEventListener('load', function () {
