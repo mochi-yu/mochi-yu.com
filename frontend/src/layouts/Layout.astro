@@ -12,6 +12,6 @@ const { title } = Astro.props;
 
 <HtmlBaseLayout title={title}>
   <Header />
-  <p class:list={['text-display-large']}>ほげほげ</p>
+  <slot />
   <Footer />
 </HtmlBaseLayout>
