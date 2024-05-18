@@ -1,0 +1,50 @@
+---
+import ProductCard from './product_card.astro';
+---
+
+<section id='main_product'>
+  <h2 class='text-display-small'>主な制作物</h2>
+  <div class='hr'></div>
+  <div id='main_product_content'>
+    <ProductCard />
+    <ProductCard />
+    <ProductCard />
+    <ProductCard />
+  </div>
+  <div id='more_pdouct'>
+    <a href='/product'>
+      <p>{'もっと見る >>'}</p>
+    </a>
+  </div>
+</section>
+<style>
+  #main_product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 10px 0px 10px;
+    row-gap: 10px;
+  }
+
+  #main_product .hr {
+    width: 100px;
+    border-bottom: 3px solid #79747e;
+  }
+
+  #main_product h2 {
+    font-weight: 300;
+  }
+
+  #main_product_content {
+    display: flex;
+    column-gap: 30px;
+    padding: 20px 10px 30px 10px;
+  }
+
+  #more_pdouct {
+    width: 1110px;
+    text-align: right;
+  }
+</style>

@@ -1,0 +1,59 @@
+---
+
+---
+
+<div id='product_card'>
+  <img src='/images/demo_atricle_thumbnail.png' alt='プロダクトのサムネイル' />
+  <div id='product_card_content'>
+    <div id='product_card_title'>
+      <p class='text-title-large'>IdeaMixer</p>
+      <p class='text-label-small'>アイデアの組み合わせを自動で<br />生成するアプリ</p>
+    </div>
+    <p class='text-body-small'>
+      「アイデアとは既存の要素の新しい組み合わせである。」という言葉をリスペクトして作成したアプリ。自分の中の既存の知識や単語を貯めて置き、それらのランダムな組み合わせを生成する。
+    </p>
+    <div id='product_skill_icon_container'>
+      <img src='/images/github.svg' alt='githubのアイコン' />
+      <img src='/images/github.svg' alt='githubのアイコン' />
+      <img src='/images/github.svg' alt='githubのアイコン' />
+    </div>
+  </div>
+</div>
+<style>
+  #product_card {
+    width: 250px;
+    border-radius: 5px;
+    box-shadow: 2px 4px 4px rgba(00, 00, 00, 0.25);
+  }
+
+  #product_card img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  #product_card_content {
+    display: flex;
+    padding: 10px;
+    row-gap: 10px;
+    flex-direction: column;
+  }
+
+  #product_card_title {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #product_card_title .text-label-small {
+    margin-top: -3px;
+  }
+
+  #product_skill_icon_container {
+    display: flex;
+    column-gap: 5px;
+  }
+
+  #product_skill_icon_container img {
+    width: 15px;
+    height: auto;
+  }
+</style>
