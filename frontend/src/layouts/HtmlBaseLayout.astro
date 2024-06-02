@@ -42,11 +42,10 @@ const { title = 'もちのポートフォリオ' } = Astro.props;
     <link rel='icon' type='image/svg+xml' href='/favicon.png' />
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
-
-    <link rel='stylesheet' href='/styles/reset.min.css' />
-    <link rel='stylesheet' href='/styles/text.css' />
   </head>
   <body>
+    <link rel='stylesheet' href='/styles/reset.min.css' />
+    <link rel='stylesheet' href='/styles/text.css' />
     <slot />
   </body>
 </html>

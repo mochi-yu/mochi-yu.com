@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import SnsIconList from '../components/ui/sns_icon_list.astro';
 
+import KeyVisual from '../components/keyVisual/key_visual.astro';
 import Profile from '../components/profile.astro';
 import MainProduct from '../components/main_product.astro';
 import MainSkills from '../components/skill/main_skills.astro';
@@ -9,48 +9,7 @@ import MainSkills from '../components/skill/main_skills.astro';
 
 <Layout title='もちポートフォリオ'>
   <main id='index_page'>
-    <div id='key_visual'>
-      <div id='key_visual_img'></div>
-      <div id='key_visual_content'>
-        <p class='text-display-large'>もっちー / mochi-yu</p>
-        <div class='hr'></div>
-        <SnsIconList />
-      </div>
-    </div>
-    <style>
-      /* FIXME */
-      #key_visual {
-        position: relative;
-        width: 100vw;
-        height: calc(100vh - 80px);
-      }
-
-      #key_visual_img {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        background: pink;
-        width: 100vw;
-        height: 100%;
-        z-index: -10;
-      }
-
-      #key_visual_content {
-        display: flex;
-        flex-direction: column;
-        row-gap: 20px;
-
-        height: 100%;
-        align-items: center;
-        justify-content: center;
-      }
-
-      #key_visual_content .hr {
-        width: 300px;
-        border-bottom: 3px solid #79747e;
-      }
-    </style>
-
+    <KeyVisual />
     <Profile />
     <MainProduct />
     <MainSkills />
