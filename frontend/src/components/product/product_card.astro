@@ -1,21 +1,58 @@
 ---
+interface Props {
+  product: Product;
+}
 
+const { product } = Astro.props;
+
+export interface Product {
+  title: string;
+  thumbnail: string;
+  titleLink: string;
+  subTitle: string;
+  summary: string;
+  skills: string[];
+}
 ---
 
 <div id='product_card'>
-  <img src='/images/demo_atricle_thumbnail.png' alt='プロダクトのサムネイル' />
+  <img id='product_img' src={product.thumbnail} alt='プロダクトのサムネイル' />
   <div id='product_card_content'>
     <div id='product_card_title'>
-      <p class='text-title-large'>IdeaMixer</p>
-      <p class='text-label-small'>アイデアの組み合わせを自動で<br />生成するアプリ</p>
+      <a href={product.titleLink}>
+        <p class='text-title-large'>{product.title}</p>
+      </a>
+      <p class='text-label-small'>
+        {
+          product.subTitle.split('<br>').map((elm) => {
+            return (
+              <>
+                {elm}
+                <br />
+              </>
+            );
+          })
+        }
+      </p>
     </div>
     <p class='text-body-small'>
-      「アイデアとは既存の要素の新しい組み合わせである。」という言葉をリスペクトして作成したアプリ。自分の中の既存の知識や単語を貯めて置き、それらのランダムな組み合わせを生成する。
+      {
+        product.summary.split('<br>').map((elm) => {
+          return (
+            <>
+              {elm}
+              <br />
+            </>
+          );
+        })
+      }
     </p>
     <div id='product_skill_icon_container'>
-      <img src='/images/icons/github.svg' alt='githubのアイコン' />
-      <img src='/images/icons/github.svg' alt='githubのアイコン' />
-      <img src='/images/icons/github.svg' alt='githubのアイコン' />
+      {
+        product.skills.map((skill) => {
+          return <img src={skill} />;
+        })
+      }
     </div>
   </div>
 </div>
@@ -26,9 +63,13 @@
     box-shadow: 2px 4px 4px rgba(00, 00, 00, 0.25);
   }
 
-  #product_card img {
+  #product_card #product_img {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+
+    width: 250px;
+    aspect-ratio: 8 / 5;
+    object-fit: contain;
   }
 
   #product_card_content {

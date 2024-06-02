@@ -1,15 +1,19 @@
 ---
-import ProductCard from './product_card.astro';
+import ProductCard, { type Product } from './product_card.astro';
+import mainProductData from '@public/json/main_product.json';
+
+const products: Product[] = mainProductData;
 ---
 
 <section id='main_product'>
   <h2 class='text-display-small'>主な制作物</h2>
   <div class='hr'></div>
   <div id='main_product_content'>
-    <ProductCard />
-    <ProductCard />
-    <ProductCard />
-    <ProductCard />
+    {
+      products.map((product) => {
+        return <ProductCard product={product} />;
+      })
+    }
   </div>
   <div id='more_pdouct'>
     <a href='/product'>
