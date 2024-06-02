@@ -8,6 +8,11 @@ import SkillList from './skill_list.astro';
   <div class='hr'></div>
   <SkillLevelDescription />
   <SkillList />
+  <div id='more_pdouct'>
+    <a href='/skill'>
+      <p>{'もっと見る >>'}</p>
+    </a>
+  </div>
 </section>
 <style>
   #main_skills {
@@ -27,5 +32,10 @@ import SkillList from './skill_list.astro';
   #main_skills .hr {
     width: 100px;
     border-bottom: 3px solid #79747e;
+  }
+
+  #more_pdouct {
+    width: 100%;
+    text-align: right;
   }
 </style>
