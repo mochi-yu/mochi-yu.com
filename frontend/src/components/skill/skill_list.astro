@@ -1,5 +1,6 @@
 ---
 import Skill, { type SkillModel } from './skill.astro';
+import mainSkillData from '../../../public/json/main_skills.json';
 
 interface Props {
   title?: string;
@@ -7,38 +8,33 @@ interface Props {
 
 const { title = '' } = Astro.props;
 
-// const skills: SkillModel[] = [
-//   {
-//     name: 'Go言語',
-//     grade: 5,
-//     icon: '/images/github.svg',
-//   },
-//   {
-//     name: 'Go言語',
-//     grade: 5,
-//     icon: '/images/github.svg',
-//   },
-//   {
-//     name: 'Go言語',
-//     grade: 5,
-//     icon: '/images/github.svg',
-//   },
-//   {
-//     name: 'Go言語',
-//     grade: 5,
-//     icon: '/images/github.svg',
-//   },
-// ];
-
-const skills = ['aaa', 'bbb'];
+const skills: SkillModel[] = mainSkillData;
 ---
 
 <div id='skill_list_container'>
   {title != '' && <p class='text-title-large'>{title}</p>}
 
-  <!-- <p>{skills}</p> -->
   <div id='skill_list'>
-    {skills.forEach((skill) => <Skill skill={skill} />)}
-    <!-- {skills.forEach((skill) => <p>{skill}</p>)} -->
+    {skills.slice(0, 7).map((skill) => <Skill skill={skill} />)}
+  </div>
+  <div id='skill_list'>
+    {skills.slice(7, 10).map((skill) => <Skill skill={skill} />)}
   </div>
 </div>
+<style>
+  #skill_list_container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    padding: 20px 10px;
+    row-gap: 20px;
+  }
+
+  #skill_list {
+    display: flex;
+    column-gap: 30px;
+    justify-content: center;
+    width: 100%;
+  }
+</style>
