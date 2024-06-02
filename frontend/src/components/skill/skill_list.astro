@@ -1,0 +1,44 @@
+---
+import Skill, { type SkillModel } from './skill.astro';
+
+interface Props {
+  title?: string;
+}
+
+const { title = '' } = Astro.props;
+
+// const skills: SkillModel[] = [
+//   {
+//     name: 'Go言語',
+//     grade: 5,
+//     icon: '/images/github.svg',
+//   },
+//   {
+//     name: 'Go言語',
+//     grade: 5,
+//     icon: '/images/github.svg',
+//   },
+//   {
+//     name: 'Go言語',
+//     grade: 5,
+//     icon: '/images/github.svg',
+//   },
+//   {
+//     name: 'Go言語',
+//     grade: 5,
+//     icon: '/images/github.svg',
+//   },
+// ];
+
+const skills = ['aaa', 'bbb'];
+---
+
+<div id='skill_list_container'>
+  {title != '' && <p class='text-title-large'>{title}</p>}
+
+  <!-- <p>{skills}</p> -->
+  <div id='skill_list'>
+    {skills.forEach((skill) => <Skill skill={skill} />)}
+    <!-- {skills.forEach((skill) => <p>{skill}</p>)} -->
+  </div>
+</div>
