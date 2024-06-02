@@ -1,0 +1,47 @@
+---
+import Stars from './stars.astro';
+
+export type SkillModel = {
+  name: string;
+  grade: number;
+  icon: string;
+};
+
+interface Props {
+  skill: SkillModel;
+}
+
+const { skill } = Astro.props;
+---
+
+<div id='skill'>
+  <img src={skill.icon} />
+  <div id='skill_content'>
+    <p class='text-body-large'>{skill.name}</p>
+    <Stars filled_count={skill.grade} />
+  </div>
+</div>
+<style>
+  #skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+  }
+
+  #skill img {
+    width: auto;
+    height: 70px;
+  }
+
+  #skill_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #skill_content p {
+    width: fit-content;
+    margin-bottom: -5px;
+  }
+</style>

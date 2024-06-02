@@ -1,0 +1,28 @@
+---
+interface Props {
+  size?: string;
+  gap?: string;
+}
+
+const { size = '40px', gap = '30px' } = Astro.props;
+---
+
+<div id='sns_icon_list'>
+  <a href='https://github.com/mochi-yu'>
+    <img src='/images/icons/github.svg' alt='GitHubのアイコン' />
+  </a>
+  <a href='https://qiita.com/mochi_2225'>
+    <img src='/images/icons/qiita.png' alt='Qiitaのアイコン' />
+  </a>
+</div>
+<style define:vars={{ size: size, gap: gap }}>
+  #sns_icon_list {
+    width: fit-content;
+    display: flex;
+    column-gap: var(--gap);
+  }
+
+  #sns_icon_list > a {
+    width: var(--size);
+  }
+</style>
