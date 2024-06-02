@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Go言語",
+    "grade": 5,
+    "icon": "/images/icons/golang.svg"
+  },
+  {
+    "name": "Python",
+    "grade": 4,
+    "icon": "/images/icons/python.svg"
+  },
+  {
+    "name": "C/C++",
+    "grade": 4,
+    "icon": "/images/icons/cpp.svg"
+  },
+  {
+    "name": "Unity",
+    "grade": 3,
+    "icon": "/images/icons/unity.svg"
+  },
+  {
+    "name": "Unreal Engine",
+    "grade": 3,
+    "icon": "/images/icons/ue5.svg"
+  },
+  {
+    "name": "React",
+    "grade": 5,
+    "icon": "/images/icons/react.svg"
+  },
+  {
+    "name": "Flutter",
+    "grade": 3,
+    "icon": "/images/icons/flutter.svg"
+  },
+  {
+    "name": "Git/GitHub",
+    "grade": 5,
+    "icon": "/images/icons/git.svg"
+  },
+  {
+    "name": "AWS各種サービス",
+    "grade": 4,
+    "icon": "/images/icons/lambda.svg"
+  },
+  {
+    "name": "Docker",
+    "grade": 5,
+    "icon": "/images/icons/docker.svg"
+  }
+]

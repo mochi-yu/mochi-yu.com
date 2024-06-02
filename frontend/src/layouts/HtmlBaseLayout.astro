@@ -1,0 +1,51 @@
+---
+import DynamicViewport from '@layouts/_DynamicViewport.astro';
+
+interface Props {
+  title?: string;
+}
+
+const { title = 'もちのポートフォリオ' } = Astro.props;
+---
+
+<!doctype html>
+<html lang='ja'>
+  <head>
+    <!-- 
+　     　(::ﾟ:)
+　     （＿＿）　　　ﾓﾁｰ
+  ＼（　･∀･ ）／
+  　[二二二二]
+    |　  　○　  　|
+    |_| ￣ |_|
+    -->
+
+    <!-- ▼▼▼ Google tag (gtag.js) ▼▼▼ -->
+    <script is:inline async src='https://www.googletagmanager.com/gtag/js?id=G-TXBGDG4HDJ'></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-TXBGDG4HDJ');
+    </script>
+    <!-- ▲▲▲▲▲▲ -->
+
+    <!-- ▼▼▼ Veiwポートを動的に変える処理 ▼▼▼ -->
+    <DynamicViewport />
+    <!-- ▲▲▲▲▲▲ -->
+
+    <meta charset='UTF-8' />
+    <meta name='description' content='もっちーのポートフォリオサイトです。' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.png' />
+    <meta name='generator' content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <link rel='stylesheet' href='/styles/reset.min.css' />
+    <link rel='stylesheet' href='/styles/text.css' />
+    <slot />
+  </body>
+</html>

@@ -1,0 +1,100 @@
+---
+interface Props {
+  product: Product;
+}
+
+const { product } = Astro.props;
+
+export interface Product {
+  title: string;
+  thumbnail: string;
+  titleLink: string;
+  subTitle: string;
+  summary: string;
+  skills: string[];
+}
+---
+
+<div id='product_card'>
+  <img id='product_img' src={product.thumbnail} alt='プロダクトのサムネイル' />
+  <div id='product_card_content'>
+    <div id='product_card_title'>
+      <a href={product.titleLink}>
+        <p class='text-title-large'>{product.title}</p>
+      </a>
+      <p class='text-label-small'>
+        {
+          product.subTitle.split('<br>').map((elm) => {
+            return (
+              <>
+                {elm}
+                <br />
+              </>
+            );
+          })
+        }
+      </p>
+    </div>
+    <p class='text-body-small'>
+      {
+        product.summary.split('<br>').map((elm) => {
+          return (
+            <>
+              {elm}
+              <br />
+            </>
+          );
+        })
+      }
+    </p>
+    <div id='product_skill_icon_container'>
+      {
+        product.skills.map((skill) => {
+          return <img src={skill} />;
+        })
+      }
+    </div>
+  </div>
+</div>
+<style>
+  #product_card {
+    width: 250px;
+    border-radius: 5px;
+    box-shadow: 2px 4px 4px rgba(00, 00, 00, 0.25);
+  }
+
+  #product_card #product_img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    width: 250px;
+    aspect-ratio: 8 / 5;
+    object-fit: contain;
+  }
+
+  #product_card_content {
+    display: flex;
+    padding: 10px;
+    row-gap: 10px;
+    flex-direction: column;
+  }
+
+  #product_card_title {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #product_card_title .text-label-small {
+    margin-top: -3px;
+  }
+
+  #product_skill_icon_container {
+    display: flex;
+    column-gap: 5px;
+  }
+
+  #product_skill_icon_container img {
+    width: 15px;
+    height: auto;
+  }
+</style>
