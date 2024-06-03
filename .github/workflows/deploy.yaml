@@ -18,14 +18,40 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout your repository using git
-        uses: actions/checkout@v4
-      - name: Install, build, and upload your site
-        uses: withastro/action@v2
+      - name: Checkout
+        uses: actions/checkout@v4.1.6
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4.0.2
         with:
-          path: frontend # リポジトリ内のAstroプロジェクトのルートロケーション。(オプション)
-          # node-version: 18 # サイト構築に使用するNodeのバージョン。デフォルトは18です。（オプション）
-          # package-manager: pnpm@latest # 依存関係のインストールとサイトのビルドに使用する Node パッケージマネージャ。ロックファイルに基づいて自動的に検出されます。(オプション)
+          node-version: 20
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.0.6
+
+      - name: Install packages
+        working-directory: frontend
+        run: pnpm install
+
+      - name: Build
+        working-directory: frontend
+        run: pnpm run build
+
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3.0.1
+        with:
+          path: "frontend/dist/"
+      # - name: Checkout your repository using git
+      #   uses: actions/checkout@v4
+      # - name: Install, build, and upload your site
+      #   uses: withastro/action@v2
+      #   working-directory: frontend
+      #   with:
+      #     path: frontend # リポジトリ内のAstroプロジェクトのルートロケーション。(オプション)
+      #     # node-version: 18 # サイト構築に使用するNodeのバージョン。デフォルトは18です。（オプション）
+      #     # package-manager: pnpm@latest # 依存関係のインストールとサイトのビルドに使用する Node パッケージマネージャ。ロックファイルに基づいて自動的に検出されます。(オプション)
 
   deploy:
     needs: build
@@ -36,4 +62,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4.0.5
