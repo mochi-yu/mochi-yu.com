@@ -1,0 +1,55 @@
+name: Lint Project
+
+on:
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.6
+        with:
+          fetch-depth: 0
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4.0.2
+        with:
+          node-version: 20
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          package_json_file: frontend/package.json
+
+      - name: Install packages
+        run: pnpm install
+        working-directory: frontend
+
+      - name: Format
+        run: pnpm run format
+        working-directory: frontend
+
+      - name: Determine the branch name
+        id: get_branch
+        run: echo "branch=$(echo ${GITHUB_HEAD_REF})" >> $GITHUB_OUTPUT
+
+      - name: Commit Format
+        run: |
+          git add -N . # 新規ファイルを含める
+          if ! git diff --exit-code --quiet
+          then
+            git config user.name github-actions
+            git config user.email github-actions@github.com
+            git add .
+            git commit -m "chore: fix format."
+            git push origin HEAD:${{ steps.get_branch.outputs.branch }}
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+
+      - name: Exec Lint
+        run: pnpm run lint
+        working-directory: frontend
