@@ -1,4 +1,6 @@
 ---
+import MoreLink from '@components/ui/more_link.astro';
+import SectionTitle from '@components/ui/section_title.astro';
 import mainProductData from '@public/json/main_product.json';
 
 import ProductCard, { type Product } from './product_card.astro';
@@ -7,8 +9,7 @@ const products: Product[] = mainProductData;
 ---
 
 <section id='main_product'>
-  <h2 class='text-display-small'>主な制作物</h2>
-  <div class='hr'></div>
+  <SectionTitle title='主な制作物' />
   <div id='main_product_content'>
     {
       products.map((product) => {
@@ -16,11 +17,7 @@ const products: Product[] = mainProductData;
       })
     }
   </div>
-  <div id='more_pdouct'>
-    <a href='/product'>
-      <p>{'もっと見る >>'}</p>
-    </a>
-  </div>
+  <MoreLink link='/product' />
 </section>
 <style>
   #main_product {
@@ -28,28 +25,25 @@ const products: Product[] = mainProductData;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    padding: 30px 10px 0px 10px;
     row-gap: 10px;
-  }
-
-  #main_product .hr {
-    width: 100px;
-    border-bottom: 3px solid #79747e;
-  }
-
-  #main_product h2 {
-    font-weight: 300;
   }
 
   #main_product_content {
     display: flex;
     column-gap: 30px;
-    padding: 20px 10px 30px 10px;
+    padding: 30px;
   }
 
-  #more_pdouct {
-    width: 1110px;
-    text-align: right;
+  @media screen and (max-width: 600px) {
+    #main_product {
+      row-gap: 2.56vw;
+    }
+
+    #main_product_content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3.84vw;
+      padding: 3.84vw;
+    }
   }
 </style>

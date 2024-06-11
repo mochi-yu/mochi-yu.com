@@ -20,9 +20,10 @@ export interface Product {
   <div id='product_card_content'>
     <div id='product_card_title'>
       <a href={product.titleLink}>
-        <p class='text-title-large'>{product.title}</p>
+        <p class='text-body'>{product.title}</p>
       </a>
-      <p class='text-label-small'>
+      <!-- TODO: SP/PCどちらかのみの改行 -->
+      <p class='text-detail'>
         {
           product.subTitle.split('<br>').map((elm) => {
             return (
@@ -35,7 +36,7 @@ export interface Product {
         }
       </p>
     </div>
-    <p class='text-body-small'>
+    <p class='text-detail'>
       {
         product.summary.split('<br>').map((elm) => {
           return (
@@ -59,17 +60,15 @@ export interface Product {
 <style>
   #product_card {
     width: 250px;
+    height: fit-content;
     border-radius: 5px;
     box-shadow: 2px 4px 4px rgba(00, 00, 00, 0.25);
+    border: 1px solid var(--border);
   }
 
-  #product_card #product_img {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-
-    width: 250px;
-    aspect-ratio: 8 / 5;
-    object-fit: contain;
+  #product_img {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
   }
 
   #product_card_content {
@@ -84,17 +83,42 @@ export interface Product {
     flex-direction: column;
   }
 
-  #product_card_title .text-label-small {
+  #product_card_title .text-detail {
     margin-top: -3px;
   }
 
   #product_skill_icon_container {
     display: flex;
-    column-gap: 5px;
+    flex-wrap: nowrap;
+    gap: 5px;
   }
 
   #product_skill_icon_container img {
-    width: 15px;
-    height: auto;
+    height: 20px;
+    width: auto;
+  }
+
+  @media screen and (max-width: 600px) {
+    #product_card {
+      width: 38.46vw;
+      box-shadow: 0.5vw 1.02vw 1.02vw rgba(00, 00, 00, 0.25);
+    }
+
+    #product_card_content {
+      padding: 2.56vw;
+      row-gap: 2.56vw;
+    }
+
+    #product_card_title .text-detail {
+      margin-top: -1vw;
+    }
+
+    #product_skill_icon_container {
+      gap: 1.28vw;
+    }
+
+    #product_skill_icon_container img {
+      height: 5.12vw;
+    }
   }
 </style>
