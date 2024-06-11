@@ -45,13 +45,10 @@ const { title = 'もちのポートフォリオ' } = Astro.props;
     <link rel='stylesheet' href='/styles/text.css' />
     <slot />
     <style>
-      @media screen and (min-width: 621px) {
-        html {
-          min-width: 1200px;
-        }
+      html {
+        min-width: 1200px;
       }
-
-      @media screen and (max-width: 620px) {
+      @media screen and (max-width: 600px) {
         html {
           min-width: 320px;
         }

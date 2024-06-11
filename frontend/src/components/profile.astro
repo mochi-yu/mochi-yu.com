@@ -1,10 +1,11 @@
 ---
 import SnsIconList from '@components/ui/sns_icon_list.astro';
+
+import SectionTitle from './ui/section_title.astro';
 ---
 
 <section id='profile'>
-  <h2 class='text-display-small'>プロフィール</h2>
-  <div class='hr'></div>
+  <SectionTitle title='プロフィール' />
   <div id='profile_content'>
     <img id='profile_img' src='/images/profile.jpg' alt='プロフィールアイコン' />
     <div id='profile_detail'>
