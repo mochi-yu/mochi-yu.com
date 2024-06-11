@@ -4,24 +4,24 @@
 
 <header id='header'>
   <a href='/'>
-    <p class='text-headline-medium'>もっちー / mochi-yu</p>
+    <p class='text-display-small'>もっちー / mochi-yu</p>
   </a>
 
   <div id='header-menu-container'>
     <a href='/about'>
-      <p class='text-body-large'>About</p>
+      <p class='text-body'>About</p>
     </a>
     <a href='/product'>
-      <p class='text-body-large'>Product</p>
+      <p class='text-body'>Product</p>
     </a>
     <a href='/skill'>
-      <p class='text-body-large'>Skill</p>
+      <p class='text-body'>Skill</p>
     </a>
     <a href='/hobby'>
-      <p class='text-body-large'>Hobby</p>
+      <p class='text-body'>Hobby</p>
     </a>
     <a href='/contact'>
-      <p class='text-body-large'>Contact</p>
+      <p class='text-body'>Contact</p>
     </a>
   </div>
 </header>
@@ -38,14 +38,24 @@
     background-color: white;
   }
 
-  #header a {
+  a {
     text-decoration: none;
     color: black;
   }
 
-  #header #header-menu-container {
+  #header-menu-container {
     display: flex;
     column-gap: 20px;
     align-items: center;
+  }
+
+  @media screen and (max-width: 600px) {
+    #header {
+      justify-content: center;
+    }
+
+    #header-menu-container {
+      display: none;
+    }
   }
 </style>

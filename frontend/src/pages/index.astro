@@ -1,7 +1,7 @@
 ---
 import KeyVisual from '@components/keyVisual/key_visual.astro';
 import MainProduct from '@components/product/main_product.astro';
-import Profile from '@components/profile.astro';
+import Profile from '@components/profile/profile.astro';
 import MainSkills from '@components/skill/main_skills.astro';
 import Layout from '@layouts/Layout.astro';
 ---
@@ -18,6 +18,10 @@ import Layout from '@layouts/Layout.astro';
 </Layout>
 <style>
   #content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+
     padding: 40px 20px 80px 20px;
     max-width: 1200px;
     margin: 0px auto;
@@ -25,6 +29,7 @@ import Layout from '@layouts/Layout.astro';
 
   @media screen and (max-width: 600px) {
     #content {
+      row-gap: 8vw;
       padding: 10.25vw 5.12vw 20.51vw 5.12vw;
       margin: 0px auto;
       width: 100%;
