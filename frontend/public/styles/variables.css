@@ -1,0 +1,59 @@
+:root {
+  --display-large: 50px;
+  --display-small: 30px;
+  --title: 30px;
+  --sub-title: 27px;
+  --body: 20px;
+  --description: 17px;
+  --detail: 12px;
+
+  --primary: #f3af00;
+  --text: #000000;
+  --text-inverse: #ffffff;
+  --bg: #ffffff;
+  --bg-sub: #ebebeb;
+  --border: #868686;
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    --display-large: 8.2vw;
+    --display-small: 6.15vw;
+    --title: 5.12vw;
+    --sub-title: 4.61vw;
+    --body: 4.1vw;
+    --description: 3.59vw;
+    --detail: 2.56vw;
+  }
+}
+
+.text-display-large {
+  font-size: var(--display-large);
+  font-weight: bold;
+}
+
+.text-display-small {
+  font-size: var(--display-small);
+  font-weight: bold;
+}
+
+.text-title {
+  font-size: var(--title);
+  font-weight: bold;
+}
+
+.text-sub-title {
+  font-size: var(--sub-title);
+}
+
+.text-body {
+  font-size: var(--body);
+}
+
+.text-description {
+  font-size: var(--description);
+}
+
+.text-detail {
+  font-size: var(--detail);
+}
