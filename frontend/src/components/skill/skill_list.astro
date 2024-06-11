@@ -13,13 +13,10 @@ const skills: SkillModel[] = mainSkillData;
 ---
 
 <div id='skill_list_container'>
-  {title != '' && <p class='text-title-large'>{title}</p>}
+  {title != '' && <p class='text-sub-title'>{title}</p>}
 
   <div id='skill_list'>
-    {skills.slice(0, 7).map((skill) => <Skill skill={skill} />)}
-  </div>
-  <div id='skill_list'>
-    {skills.slice(7, 10).map((skill) => <Skill skill={skill} />)}
+    {skills.map((skill) => <Skill skill={skill} />)}
   </div>
 </div>
 <style>
@@ -28,14 +25,28 @@ const skills: SkillModel[] = mainSkillData;
     flex-direction: column;
     width: 100%;
 
-    padding: 20px 10px;
-    row-gap: 20px;
+    padding: 20px 30px;
+    row-gap: 30px;
   }
 
   #skill_list {
     display: flex;
     column-gap: 30px;
+    row-gap: 30px;
+    flex-wrap: wrap;
     justify-content: center;
     width: 100%;
+  }
+
+  @media screen and (max-width: 600px) {
+    #skill_list_container {
+      padding: 5.12vw 0;
+      row-gap: 5.12vw;
+    }
+
+    #skill_list {
+      column-gap: 3.84vw;
+      row-gap: 3.84vw;
+    }
   }
 </style>

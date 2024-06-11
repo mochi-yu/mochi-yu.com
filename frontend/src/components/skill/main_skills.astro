@@ -1,42 +1,31 @@
 ---
 import SkillLevelDescription from '@components/skill/skill_level_description.astro';
+import MoreLink from '@components/ui/more_link.astro';
+import SectionTitle from '@components/ui/section_title.astro';
 
 import SkillList from './skill_list.astro';
 ---
 
 <section id='main_skills'>
-  <h2 class='text-display-small'>主なスキル</h2>
-  <div class='hr'></div>
+  <SectionTitle title='主なスキル' />
+
   <SkillLevelDescription />
   <SkillList />
-  <div id='more_pdouct'>
-    <a href='/skill'>
-      <p>{'もっと見る >>'}</p>
-    </a>
-  </div>
+
+  <MoreLink link='/skill' />
 </section>
 <style>
   #main_skills {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
-    padding: 30px 10px 80px 10px;
+    padding: 0;
     align-items: center;
-    margin: auto;
-    width: 1110px;
   }
 
-  #main_skills h2 {
-    font-weight: normal;
-  }
-
-  #main_skills .hr {
-    width: 100px;
-    border-bottom: 3px solid #79747e;
-  }
-
-  #more_pdouct {
-    width: 100%;
-    text-align: right;
+  @media screen and (max-width: 600px) {
+    #main_skills {
+      row-gap: 2.5vw;
+    }
   }
 </style>

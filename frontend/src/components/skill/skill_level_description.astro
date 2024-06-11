@@ -3,35 +3,31 @@ import Stars from './stars.astro';
 ---
 
 <div id='skill_level_description'>
-  <p class='text-title-medium'>スキルレベル</p>
-  <div id='skill_level_container'>
-    <div class='skill_level_column'>
-      <div class='skill_level_item'>
-        <Stars filled_count={5} />
-        <p class='text-body-small'>：自信を持って扱うことができる</p>
-      </div>
-      <div class='skill_level_item'>
-        <Stars filled_count={4} />
-        <p class='text-body-small'>：ある程度の使用経験がある</p>
-      </div>
-      <div class='skill_level_item'>
-        <Stars filled_count={3} />
-        <p class='text-body-small'>：ドキュメントなどを参照しながら開発ができる</p>
-      </div>
+  <p class='text-title-description'>スキルレベル</p>
+  <div id='slill_level_container'>
+    <div class='skill_level_item'>
+      <Stars filled_count={5} />
+      <p class='text-detail'>：自信を持って扱うことができる</p>
     </div>
-    <div class='skill_level_column'>
-      <div class='skill_level_item'>
-        <Stars filled_count={2} />
-        <p class='text-body-small'>：簡単なプログラムを開発したことがある</p>
-      </div>
-      <div class='skill_level_item'>
-        <Stars filled_count={1} />
-        <p class='text-body-small'>：少し学習をしたことがある</p>
-      </div>
-      <div class='skill_level_item'>
-        <Stars filled_count={0} />
-        <p class='text-body-small'>：まだしっかり学習したことが無いが気になる</p>
-      </div>
+    <div class='skill_level_item'>
+      <Stars filled_count={4} />
+      <p class='text-detail'>：ある程度の使用経験がある</p>
+    </div>
+    <div class='skill_level_item'>
+      <Stars filled_count={3} />
+      <p class='text-detail'>：ドキュメントなどを参照しながら開発ができる</p>
+    </div>
+    <div class='skill_level_item'>
+      <Stars filled_count={2} />
+      <p class='text-detail'>：簡単なプログラムを開発したことがある</p>
+    </div>
+    <div class='skill_level_item'>
+      <Stars filled_count={1} />
+      <p class='text-detail'>：少し学習をしたことがある</p>
+    </div>
+    <div class='skill_level_item'>
+      <Stars filled_count={0} />
+      <p class='text-detail'>：まだしっかり学習したことが無いが気になる</p>
     </div>
   </div>
 </div>
@@ -43,14 +39,25 @@ import Stars from './stars.astro';
     justify-content: center;
   }
 
-  .skill_level_column {
+  #slill_level_container {
     display: flex;
     column-gap: 20px;
+    row-gap: 0px;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
   }
 
   .skill_level_item {
     display: flex;
+  }
+
+  @media screen and (max-width: 600px) {
+    #slill_level_container {
+      flex-wrap: nowrap;
+      flex-direction: column;
+      column-gap: 0px;
+      align-items: start;
+    }
   }
 </style>
