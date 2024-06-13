@@ -20,12 +20,18 @@ const dummyArray = [0, 0, 0, 0, 0];
 </div>
 <style>
   img {
-    height: 18px;
+    height: var(--description);
     width: auto;
     margin-left: -2px;
   }
 
   #stars {
     display: flex;
+  }
+
+  @media screen and (max-width: 600px) {
+    img {
+      margin-left: -0.51vw;
+    }
   }
 </style>

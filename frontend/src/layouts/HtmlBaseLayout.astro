@@ -1,6 +1,4 @@
 ---
-import DynamicViewport from '@layouts/_DynamicViewport.astro';
-
 interface Props {
   title?: string;
 }
@@ -25,6 +23,7 @@ const { title = 'もちのポートフォリオ' } = Astro.props;
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
+        // eslint-disable-next-line no-undef
         dataLayer.push(arguments);
       }
       gtag('js', new Date());
@@ -33,19 +32,26 @@ const { title = 'もちのポートフォリオ' } = Astro.props;
     </script>
     <!-- ▲▲▲▲▲▲ -->
 
-    <!-- ▼▼▼ Veiwポートを動的に変える処理 ▼▼▼ -->
-    <DynamicViewport />
-    <!-- ▲▲▲▲▲▲ -->
-
     <meta charset='UTF-8' />
     <meta name='description' content='もっちーのポートフォリオサイトです。' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <link rel='icon' type='image/svg+xml' href='/favicon.png' />
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
+    <link rel='stylesheet' href='/styles/variables.css' />
+    <link rel='stylesheet' href='/styles/reset.min.css' />
   </head>
   <body>
-    <link rel='stylesheet' href='/styles/reset.min.css' />
-    <link rel='stylesheet' href='/styles/text.css' />
     <slot />
+    <style>
+      html {
+        min-width: 1200px;
+      }
+      @media screen and (max-width: 600px) {
+        html {
+          min-width: 320px;
+        }
+      }
+    </style>
   </body>
 </html>

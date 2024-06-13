@@ -2,9 +2,16 @@
 interface Props {
   size?: string;
   gap?: string;
+  sizeVW?: string;
+  gapVW?: string;
 }
 
-const { size = '40px', gap = '30px' } = Astro.props;
+const {
+  size = '40px',
+  gap = '30px',
+  sizeVW = 'max(7.69vw, 24.61px)',
+  gapVW = 'max(3.84vw, 12.28px)',
+} = Astro.props;
 ---
 
 <div id='sns_icon_list'>
@@ -15,7 +22,7 @@ const { size = '40px', gap = '30px' } = Astro.props;
     <img src='/images/icons/qiita.png' alt='Qiitaのアイコン' />
   </a>
 </div>
-<style define:vars={{ size: size, gap: gap }}>
+<style define:vars={{ size: size, gap: gap, sizeVW: sizeVW, gapVW: gapVW }}>
   #sns_icon_list {
     width: fit-content;
     display: flex;
@@ -24,5 +31,15 @@ const { size = '40px', gap = '30px' } = Astro.props;
 
   #sns_icon_list > a {
     width: var(--size);
+  }
+
+  @media screen and (max-width: 600px) {
+    #sns_icon_list {
+      column-gap: var(--gapVW);
+    }
+
+    #sns_icon_list > a {
+      width: var(--sizeVW);
+    }
   }
 </style>

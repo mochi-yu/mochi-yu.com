@@ -1,0 +1,54 @@
+---
+import SectionTitle from '../ui/section_title.astro';
+
+import ProfileDetail from './profile_detail.astro';
+---
+
+<section id='profile'>
+  <SectionTitle title='プロフィール' />
+  <div id='profile_content'>
+    <img id='profile_img' src='/images/profile.jpg' alt='プロフィールアイコン' />
+    <ProfileDetail />
+  </div>
+</section>
+<style>
+  #profile {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+  #profile_content {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+  }
+
+  #profile_img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50px;
+  }
+
+  @media screen and (max-width: 600px) {
+    #profile {
+      row-gap: max(2.56vw, 8.19px);
+    }
+
+    #profile_content {
+      display: flex;
+      flex-direction: column;
+      gap: max(5.12vw, 16px);
+      align-items: center;
+    }
+
+    #profile_img {
+      width: max(64vw, 204.8px);
+      height: max(64vw, 204.8px);
+      border-radius: max(12vw, 38.4px);
+    }
+  }
+</style>

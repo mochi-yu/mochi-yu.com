@@ -1,0 +1,32 @@
+---
+interface Props {
+  link: string;
+  text?: string;
+}
+
+const { link, text = 'もっと見る >>' } = Astro.props;
+---
+
+<div id='more-link'>
+  <a href={link}>
+    <p class='text-description'>{text}</p>
+  </a>
+</div>
+<style>
+  #more-link {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    padding-right: 30px;
+  }
+
+  #more-link a {
+    color: var(--primary);
+  }
+
+  @media screen and (max-width: 600px) {
+    #more-link {
+      padding-right: max(7.7vw, 24.64px);
+    }
+  }
+</style>

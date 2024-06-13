@@ -17,7 +17,7 @@ const { skill } = Astro.props;
 <div id='skill'>
   <img src={skill.icon} />
   <div id='skill_content'>
-    <p class='text-body-large'>{skill.name}</p>
+    <p class='text-description'>{skill.name}</p>
     <Stars filled_count={skill.grade} />
   </div>
 </div>
@@ -42,6 +42,22 @@ const { skill } = Astro.props;
 
   #skill_content p {
     width: fit-content;
-    margin-bottom: -5px;
+    margin-bottom: -4px;
+  }
+
+  @media screen and (max-width: 600px) {
+    #skill {
+      row-gap: max(1.28vw, 4.1px);
+    }
+
+    #skill img {
+      width: auto;
+      height: max(12.82vw, 41.02px);
+    }
+
+    #skill_content p {
+      width: fit-content;
+      margin-bottom: -1vw;
+    }
   }
 </style>

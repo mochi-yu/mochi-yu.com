@@ -1,0 +1,86 @@
+---
+import BrHtml from '@components/ui/brHtml.astro';
+import SnsIconList from '@components/ui/sns_icon_list.astro';
+
+const firstProfile =
+  "2001年生まれ。<br class='sp-only' />神奈川県横浜市 出身、長野県諏訪地域 在住。<br />好奇心旺盛に、プログラミングや電子工作などの<br class='sp-only' />技術に関わることを初めとして、<br class='pc-only' />音楽や写真、<br class='sp-only' />動画作成など様々なことにチャレンジしています。";
+const secondProfile =
+  "技術としては、サーバサイドの開発を<br class='sp-only' />主に担当することが多いですが、<br class='pc-only' />ゲーム開発、<br class='sp-only' />Webフロントエンド、ネイティブアプリ、IoT、<br class='sp-only' />機械学習、<br class='pc-only' />競技プログラミングなど、<br class='sp-only' />様々な分野に取り組んでいます。";
+const thirdProfile =
+  "今までに作成してきたものについては<br class='sp-only' /><a href='/product'>Productのページ</a>を、<br class='pc-only' />使っている技術については<br class='sp-only' /><a href='/skill' />Skillsのページ</a>を参照してください。";
+const fourthProfile =
+  "写真の撮影、動画制作、音楽制作、デザインなどの<br class='sp-only' />創作活動にも興味があって、<br class='pc-only' /> 勉強や練習をしながら<br class='sp-only' />よりよいモノが創れるように励んでいます。";
+---
+
+<div id='profile_detail'>
+  <div class='profile_container'>
+    <div id='profile_top'>
+      <p class='text-sub-title'>もっちー</p>
+      <SnsIconList
+        size='25px'
+        gap='10px'
+        sizeVW='max(5.12vw, 16.41px)'
+        gapVW='max(2.56vw, 8.20px)'
+      />
+    </div>
+    <BrHtml src={firstProfile} />
+  </div>
+  <div class='profile_container'>
+    <p class='text-body'>技術に関する興味</p>
+    <BrHtml src={secondProfile} />
+    <BrHtml src={thirdProfile} />
+  </div>
+  <div class='profile_container'>
+    <p class='text-body'>その他の興味</p>
+    <BrHtml src={fourthProfile} />
+  </div>
+</div>
+<style>
+  #profile_detail {
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    padding: 20px 10px;
+  }
+
+  #profile_detail .text-sub-title {
+    font-weight: bold;
+  }
+
+  #profile_top {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .profile_container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .profile_container .text-body {
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: 600px) {
+    #profile_detail {
+      width: 100%;
+      row-gap: max(3.84vw, 12.3px);
+      padding: 0;
+    }
+
+    #profile_detail .text-sub-title {
+      font-weight: bold;
+    }
+
+    #profile_top {
+      gap: max(2.56vw, 8.2px);
+    }
+
+    .profile_container {
+      gap: max(1.28vw, 4.1px);
+    }
+  }
+</style>

@@ -5,11 +5,7 @@
     "thumbnail": "/images/products/idea_mixer.png",
     "subTitle": "アイデアの組み合わせを自動で<br>生成するアプリ",
     "summary": "「アイデアとは既存の要素の新しい組み合わせである。」という言葉をリスペクトして作成したアプリ。自分の中の既存の知識や単語を貯めて置き、それらのランダムな組み合わせを生成する。<br>初めて1人で参加したハッカソンで、バックからフロントまでフルスタックで開発に挑んだ。",
-    "skills": [
-      "/images/icons/docker.svg",
-      "/images/icons/python.svg",
-      "/images/icons/vue.svg"
-    ]
+    "skills": ["/images/icons/docker.svg", "/images/icons/python.svg", "/images/icons/vue.svg"]
   },
   {
     "title": "FairTreat",
@@ -17,10 +13,7 @@
     "titleLink": "https://github.com/mochi-yu/IdeaMixer-hackathon2205",
     "subTitle": "割り勘を割り振りやすくするアプリ",
     "summary": "「割り勘をよりフェアに」というコンセプトで、メニューからそれを食べた人を選択し、食べた人だけが割り勘で支払う割り振りを簡単に行うことができるアプリ。<br>学部の友人と3人チームで参加し、はじめてのスマホアプリ開発に挑戦した。",
-    "skills": [
-      "/images/icons/golang.svg",
-      "/images/icons/flutter.svg"
-    ]
+    "skills": ["/images/icons/golang.svg", "/images/icons/flutter.svg"]
   },
   {
     "title": "commitify",
@@ -28,21 +21,14 @@
     "titleLink": "https://github.com/cocoide/commitify",
     "subTitle": "LLMでコミットメッセージを<br>自動生成するCLIツール",
     "summary": "CLIツール自体はGo言語を用いて開発している。コミットメッセージの自動生成には、ChatGPTのAPIの他、公開されたばかりだったGeminiのAPIや、ベクトルデータベースなどを利用した。<br>SNS上で知り合った3人のチームで参加したハッカソンにて開発",
-    "skills": [
-      "/images/icons/docker.svg",
-      "/images/icons/python.svg",
-      "/images/icons/golang.svg"
-    ]
+    "skills": ["/images/icons/docker.svg", "/images/icons/python.svg", "/images/icons/golang.svg"]
   },
   {
-    "title": "ポートフォリオサイト",
+    "title": "ポートフォリオ",
     "thumbnail": "/images/products/portfolio.jpg",
     "titleLink": "/",
     "subTitle": "このサイト",
     "summary": "自身の活動の記録と紹介のために制作。Astro.jsを使ったWebページの開発に初めて挑戦している。",
-    "skills": [
-      "/images/icons/github.svg",
-      "/images/icons/astro.svg"
-    ]
+    "skills": ["/images/icons/github.svg", "/images/icons/astro.svg"]
   }
 ]

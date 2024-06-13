@@ -1,0 +1,35 @@
+---
+interface Props {
+  src: string;
+  class?: string;
+  isAlignCenter?: boolean;
+}
+
+const { src, class: className = 'text-description', isAlignCenter = false } = Astro.props;
+---
+
+<p class:list={[className, { alignCenter: isAlignCenter }]} set:html={src} />
+<style>
+  .alignCenter {
+    text-align: center;
+  }
+</style>
+<style is:global>
+  br.pc-only {
+    display: inline;
+  }
+
+  br.sp-only {
+    display: none;
+  }
+
+  @media screen and (max-width: 600px) {
+    br.pc-only {
+      display: none;
+    }
+
+    br.sp-only {
+      display: inline;
+    }
+  }
+</style>

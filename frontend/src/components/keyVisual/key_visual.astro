@@ -18,6 +18,7 @@ import SnsIconList from '@components/ui/sns_icon_list.astro';
     position: relative;
     width: 100%;
     height: calc(100vw * 0.572);
+    min-height: 690px;
   }
 
   #key_visual_img {
@@ -50,5 +51,22 @@ import SnsIconList from '@components/ui/sns_icon_list.astro';
   #key_visual_content .hr {
     width: 300px;
     border-bottom: 3px solid #79747e;
+  }
+
+  @media screen and (max-width: 600px) {
+    #key_visual {
+      height: 150vw;
+      min-height: 480px;
+    }
+
+    #key_visual_img img {
+      object-fit: cover;
+      height: 140%;
+    }
+
+    #key_visual_content .hr {
+      width: max(38.46vw, 123.07px);
+      border-bottom: 3px solid #79747e;
+    }
   }
 </style>
