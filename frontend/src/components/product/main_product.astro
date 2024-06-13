@@ -36,14 +36,14 @@ const products: Product[] = mainProductData;
 
   @media screen and (max-width: 600px) {
     #main_product {
-      row-gap: 2.56vw;
+      row-gap: max(2.56vw, 8.19px);
     }
 
     #main_product_content {
       display: flex;
       flex-wrap: wrap;
-      gap: 3.84vw;
-      padding: 3.84vw;
+      gap: max(3.84vw, 12.28px);
+      padding: max(3.84vw, 12.28px);
     }
   }
 </style>

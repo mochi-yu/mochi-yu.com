@@ -100,13 +100,13 @@ export interface Product {
 
   @media screen and (max-width: 600px) {
     #product_card {
-      width: 38.46vw;
+      width: max(38.46vw, 123.07px);
       box-shadow: 0.5vw 1.02vw 1.02vw rgba(00, 00, 00, 0.25);
     }
 
     #product_card_content {
-      padding: 2.56vw;
-      row-gap: 2.56vw;
+      padding: max(2.56vw, 8.19px);
+      row-gap: max(2.56vw, 8.19px);
     }
 
     #product_card_title .text-detail {
@@ -114,11 +114,11 @@ export interface Product {
     }
 
     #product_skill_icon_container {
-      gap: 1.28vw;
+      gap: max(1.28vw, 4.1px);
     }
 
     #product_skill_icon_container img {
-      height: 5.12vw;
+      height: max(5.12vw, 16px);
     }
   }
 </style>
