@@ -10,7 +10,7 @@
   {
     "title": "FairTreat",
     "thumbnail": "/images/products/fair_treat.jpg",
-    "titleLink": "https://github.com/mochi-yu/IdeaMixer-hackathon2205",
+    "titleLink": "https://github.com/mochi-yu/FairTreat-app-hacku2022",
     "subTitle": "割り勘を割り振りやすくするアプリ",
     "summary": "「割り勘をよりフェアに」というコンセプトで、メニューからそれを食べた人を選択し、食べた人だけが割り勘で支払う割り振りを簡単に行うことができるアプリ。<br>学部の友人と3人チームで参加し、はじめてのスマホアプリ開発に挑戦した。",
     "skills": ["/images/icons/golang.svg", "/images/icons/flutter.svg"]
