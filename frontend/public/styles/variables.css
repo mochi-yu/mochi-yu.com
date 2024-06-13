@@ -17,13 +17,13 @@
 
 @media screen and (max-width: 600px) {
   :root {
-    --display-large: 8.2vw;
-    --display-small: 6.15vw;
-    --title: 5.12vw;
-    --sub-title: 4.61vw;
-    --body: 4.1vw;
-    --description: 3.59vw;
-    --detail: 2.56vw;
+    --display-large: max(8.2vw, 26.24px);
+    --display-small: max(6.15vw, 19.68px);
+    --title: max(5.12vw, 16px);
+    --sub-title: max(4.61vw, 14.75px);
+    --body: max(4.1vw, 13.12px);
+    --description: max(3.59vw, 11.48px);
+    --detail: max(2.56vw, 8.19pxpx);
   }
 }
 
