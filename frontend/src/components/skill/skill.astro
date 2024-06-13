@@ -47,12 +47,12 @@ const { skill } = Astro.props;
 
   @media screen and (max-width: 600px) {
     #skill {
-      row-gap: 1.28vw;
+      row-gap: max(1.28vw, 4.1px);
     }
 
     #skill img {
       width: auto;
-      height: 12.82vw;
+      height: max(12.82vw, 41.02px);
     }
 
     #skill_content p {

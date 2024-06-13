@@ -40,13 +40,12 @@ const skills: SkillModel[] = mainSkillData;
 
   @media screen and (max-width: 600px) {
     #skill_list_container {
-      padding: 5.12vw 0;
-      row-gap: 5.12vw;
+      padding: max(5.12vw, 16px) 0;
+      row-gap: max(5.12vw, 16px);
     }
 
     #skill_list {
-      column-gap: 3.84vw;
-      row-gap: 3.84vw;
+      gap: max(3.84vw, 12.28px);
     }
   }
 </style>
