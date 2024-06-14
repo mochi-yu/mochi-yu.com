@@ -23,9 +23,9 @@ export interface Product {
         <p class='text-body'>{product.title}</p>
       </a>
       <!-- TODO: SP/PCどちらかのみの改行 -->
-      <p class='text-detail' set:html={product.subTitle} />
+      <p class='text-description' set:html={product.subTitle} />
     </div>
-    <p class='text-detail'>
+    <p class='text-description'>
       {
         product.summary.split('<br>').map((elm) => {
           return (
