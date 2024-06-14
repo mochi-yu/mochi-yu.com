@@ -3,7 +3,7 @@
     "title": "IdeaMixer",
     "titleLink": "https://github.com/mochi-yu/IdeaMixer-hackathon2205",
     "thumbnail": "/images/products/idea_mixer.png",
-    "subTitle": "アイデアの組み合わせを自動で<br class='pc-only' />生成するアプリ",
+    "subTitle": "アイデアの組み合わせを自動で<br />生成するアプリ",
     "summary": "「アイデアとは既存の要素の新しい組み合わせである。」という言葉をリスペクトして作成したアプリ。自分の中の既存の知識や単語を貯めて置き、それらのランダムな組み合わせを生成する。<br>初めて1人で参加したハッカソンで、バックからフロントまでフルスタックで開発に挑んだ。",
     "skills": ["/images/icons/docker.svg", "/images/icons/python.svg", "/images/icons/vue.svg"]
   },
@@ -19,7 +19,7 @@
     "title": "commitify",
     "thumbnail": "/images/products/commitify.png",
     "titleLink": "https://github.com/cocoide/commitify",
-    "subTitle": "LLMでコミットメッセージを<br class='pc-only' />自動生成するCLIツール",
+    "subTitle": "LLMでコミットメッセージを<br />自動生成するCLIツール",
     "summary": "CLIツール自体はGo言語を用いて開発している。コミットメッセージの自動生成には、ChatGPTのAPIの他、公開されたばかりだったGeminiのAPIや、ベクトルデータベースなどを利用した。<br>SNS上で知り合った3人のチームで参加したハッカソンにて開発",
     "skills": ["/images/icons/docker.svg", "/images/icons/python.svg", "/images/icons/golang.svg"]
   },
