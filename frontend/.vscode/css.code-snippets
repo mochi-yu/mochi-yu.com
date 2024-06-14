@@ -9,7 +9,7 @@
   "media sp": {
     "scope": "javascript,typescript,css,astro",
     "prefix": "mediasp",
-    "body": ["@media screen and (max-width: 600px) {", "\t$1", "}"],
+    "body": ["@media screen and (max-width: 640px) {", "\t$1", "}"],
     "description": "Log output to console",
   },
 }

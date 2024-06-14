@@ -23,18 +23,7 @@ export interface Product {
         <p class='text-body'>{product.title}</p>
       </a>
       <!-- TODO: SP/PCどちらかのみの改行 -->
-      <p class='text-detail'>
-        {
-          product.subTitle.split('<br>').map((elm) => {
-            return (
-              <>
-                {elm}
-                <br />
-              </>
-            );
-          })
-        }
-      </p>
+      <p class='text-detail' set:html={product.subTitle} />
     </div>
     <p class='text-detail'>
       {
@@ -98,10 +87,14 @@ export interface Product {
     width: auto;
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 640px) {
     #product_card {
-      width: max(38.46vw, 123.07px);
+      width: max(80vw, 256px);
       box-shadow: 0.5vw 1.02vw 1.02vw rgba(00, 00, 00, 0.25);
+    }
+
+    #product_img {
+      width: 100%;
     }
 
     #product_card_content {

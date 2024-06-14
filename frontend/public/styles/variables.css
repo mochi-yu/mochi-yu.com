@@ -15,7 +15,7 @@
   --border: #868686;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 640px) {
   :root {
     --display-large: max(8.2vw, 26.24px);
     --display-small: max(6.15vw, 19.68px);
